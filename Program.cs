@@ -6,6 +6,7 @@
         {
             AddressBookSystem adressbook = new AddressBookSystem();
             bool flage = true;
+            bool plag = true;
             while (flage)
             {
                 Console.WriteLine("**************** Welcome To Address Book System ****************");
@@ -32,7 +33,8 @@
                         break;
 
                 }
-                Console.ReadLine();
+                Console.WriteLine("Press Any Key.....");
+                Console.ReadKey();
             }
             
         }

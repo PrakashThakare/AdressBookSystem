@@ -10,7 +10,7 @@ namespace AddressBookSystem
 {
     public class AddressBookSystem
     {
-        Contact contact = new Contact();
+        Contact contact;
         List<Contact> contactList = new List<Contact>();
         public void CreateContact()
         {
@@ -35,7 +35,15 @@ namespace AddressBookSystem
         }
         public void Display()
         {
-            Console.WriteLine("\nContact Details :\nFirst Name   :" + contact.LastName + "\nLast Name    :" + contact.LastName + "\nAdress       :" + contact.Address + "\nCity         :" + contact.City + "\nState        :" + contact.State + "\nPhone Number :" + contact.PhoneNumber + "\nZip          :" + contact.Zip + "\nEmail        :" + contact.Email);
+            Console.WriteLine("Enter The Person Name For Displaying Information");
+            string name = Console.ReadLine();
+            foreach(Contact Fname in contactList)
+            {
+                if (Fname.FirstName == name)
+                {
+                    Console.WriteLine("\nContact Details :\nFirst Name   :" + Fname.FirstName + "\nLast Name    :" + Fname.LastName + "\nAdress       :" + Fname.Address + "\nCity         :" + Fname.City + "\nState        :" + Fname.State + "\nPhone Number :" + Fname.PhoneNumber + "\nZip          :" + Fname.Zip + "\nEmail        :" + Fname.Email); 
+                }
+            }
         }
         public void EditContact()
         {
@@ -106,9 +114,6 @@ namespace AddressBookSystem
                                 break;
                         }
                     }
-
-
-
                 }
                 else
                 {
