@@ -32,8 +32,6 @@
                         break;
 
                 }
-
-
                 Console.ReadLine();
             }
             
